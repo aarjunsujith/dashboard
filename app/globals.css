@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #ffe400;
+  --primary-dark: #fbbf24;
+  --secondary: #1a1a1a;
+  --accent: #2d2d2d;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --background: #1a1a1a;
+  --surface: #2d2d2d;
+  --text: #ffffff;
+  --text-muted: #9ca3af;
+  --border: #404040;
+  --yellow-bright: #ffe400;
+  --yellow-medium: #fbbf24;
+  --black: #000000;
+}
+
+@layer base {
+  html, body {
+    @apply h-full;
+  }
+  body {
+    @apply bg-[#1a1a1a] text-white antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-[#2d2d2d] rounded-xl border border-[#404040] shadow-lg p-6;
+  }
+
+  .panel {
+    @apply bg-[#2d2d2d] border border-[#404040] rounded-xl shadow-lg;
+  }
+
+  .btn {
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-primary {
+    @apply bg-[#ffe400] text-black hover:bg-[#fbbf24] shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-[#404040] text-white hover:bg-[#505050] border border-[#505050];
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-white border-2 border-white hover:bg-white hover:text-black;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 border border-[#404040] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#ffe400] focus:border-transparent bg-[#2d2d2d] text-white;
+  }
+
+  .metric-card {
+    @apply bg-[#2d2d2d] rounded-xl border border-[#404040] p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-4 px-6 py-4 rounded-xl transition-all duration-300 hover:bg-[#404040] border-l-4 border-transparent;
+  }
+
+  .nav-item.active {
+    @apply bg-[#ffe400] text-black border-l-4 border-[#ffe400] font-semibold;
+  }
+
+  .status-badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .status-success {
+    @apply bg-green-900 text-green-300;
+  }
+
+  .status-warning {
+    @apply bg-yellow-900 text-yellow-300;
+  }
+
+  .status-danger {
+    @apply bg-red-900 text-red-300;
+  }
+
+  .status-info {
+    @apply bg-blue-900 text-blue-300;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #ffe400 0%, #fbbf24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .yellow-gradient {
+    background: linear-gradient(135deg, #ffe400 0%, #fbbf24 100%);
+  }
+
+  .dark-gradient {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  }
+
+  .icon-container {
+    @apply w-12 h-12 rounded-xl flex items-center justify-center shadow-lg;
+  }
+
+  .chart-container {
+    @apply bg-[#2d2d2d] rounded-xl border border-[#404040] p-4;
+  }
+
+  .tag {
+    @apply px-3 py-1 rounded-full text-xs font-semibold bg-[#ffe400] text-black;
+  }
+
+  .process-card {
+    @apply bg-[#2d2d2d] rounded-xl border border-[#404040] p-6 hover:shadow-xl transition-all duration-300;
+  }
+
+  .metric-number {
+    @apply text-4xl font-bold text-[#ffe400];
+  }
+
+  .metric-label {
+    @apply text-lg font-semibold text-white;
+  }
+
+  .metric-subtitle {
+    @apply text-sm text-gray-400;
+  }
+}
